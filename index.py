@@ -72,40 +72,46 @@ def arrangeDesc():
 print("\n\nThe content of the list :")
 print(list1)
 print("\nMenu: " 
-    + "\n 1 -> Add an item"              ###################
-    + "\n 2 -> Insert an item"           ###################
+    + "\n 1 -> Add an item"             
+    + "\n 2 -> Insert an item"           
     + "\n 3 -> Change the item"           
-    + "\n 4 -> Delete an item"           ###################
-    + "\n 5 -> Arrange in ascending order"  ###################
-    + "\n 6 -> Arrange in descending order" ###################
+    + "\n 4 -> Delete an item"           
+    + "\n 5 -> Arrange in ascending order"  
+    + "\n 6 -> Arrange in descending order"
     + "\n Type 'x' or 'X' to exit"
     )
 while(1==1):
     userInput = input("\nType the option: ")
 
     if(userInput == "1"):
+        print("Add an item")
         value = input("\nType the item to add: ")
         add(int(value))
         
     elif(userInput == "2"):
-        ind = input("Type the index here: ")
-        value = input("Type the item here: ")
+        print("Insert an item")
+        ind = input("Type the index where to insert: ")
+        value = input("Type the item to insert: ")
         insert(int(ind), int(value))
         
     elif(userInput == "3"):
+        print("Change an item")
         itemtoChange = input("Type the item to change: ")
         newValue = input("Type the new item here: ")
         i = list1.index(int(itemtoChange))
         modify(i, int(newValue))
         
     elif(userInput == "4"):
+        print("Remove an item")
         value = input("Type the item to remove: ")
         delete(int(value))
         
     elif(userInput == "5"):
+        print("Arrange in ascending order")
         arrangeAsc()
         
     elif(userInput == "6"):
+        print("Arrange in descending order")
         arrangeDesc()
         
     elif(userInput == "x" or userInput == "X"):
